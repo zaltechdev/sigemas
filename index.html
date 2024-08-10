@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/custom.css">
+        <link rel="stylesheet" href="./css/styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+        <title></title>
+    </head>
+    <body class="w-full h-[100dvh] bg-black flex flex-col items-center">
+        <!-- Welcome -->
+        <!-- <div class="page w-full sm:w-96 bg-cyan-50 h-[100dvh] flex flex-col items-center justify-center gap-4 p-16" id="welcome-page">
+            <img src="./img/welcome-img.png" alt="SiGemas App" class="w-56 h-max object-cover object-right mr-2">
+            <p class="font-bold text-lg text-center text-primary-teal">"Tarik nafas yang dalam,<br>lalu hembuskan perlahan.."</p>
+            <button class="rounded-md h-12 w-full bg-disabled-teal hover:bg-secondary-teal transition-colors text-primary-teal mt-16">Login</button>
+            <button class="rounded-md h-12 w-full bg-primary-teal hover:bg-active-teal transition-colors text-white">Sign Up</button>
+            <a href="#" class="text-center mt-2 text-primary-teal text-sm hover:underline">Lupa kata sandi?</a>
+        </div> -->
+        <!-- Login -->
+        <!-- <div class="overflow-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] flex flex-col gap-4 p-6" id="login-page">
+            <div class="flex flex-row items-center justify-between shrink-0">
+                <p class="font-semibold text-2xl">Masuk</p>
+                <p class="fas fa-circle-question text-primary-teal text-2xl"></p>
+            </div>
+            <div class="flex flex-col gap-3 mt-16 shrink-0">
+                <label for="account">Alamat email</label>
+                <input type="text" id="account" class="ring-1 rounded-md placeholder-shown:ring-slate-300 ring-primary-teal bg-transparent w-full px-4 h-12 transition-colors" placeholder="Masukkan email anda">
+            </div>
+            <div class="flex flex-col gap-3 mt-4 relative shrink-0">
+                <label for="password">Kata sandi</label>
+                <input type="password" id="password" class="ring-1 rounded-md placeholder-shown:ring-slate-300 ring-primary-teal bg-transparent w-full pl-4 pr-12 h-12 transition-colors" placeholder="Masukkan email anda">
+                <label for="password" class="w-12 h-12 grid place-items-center fas fa-eye absolute right-0 bottom-0" id="show-pass-btn"></label>
+            </div>
+            <a href="#" class="text-left mt-2 text-primary-teal text-sm shrink-0 hover:underline">Lupa kata sandi?</a>
+            <button class="h-12 w-full rounded-md bg-primary-teal transition-colors hover:bg-active-teal text-white mt-10 shrink-0">Masuk</button>
+            <div class="flex flex-row items-center gap-2 self-center my-3 font-medium shrink-0">
+                <p><hr class="bg-slate-800 w-8 h-[2px]"></p>
+                <p>atau</p>
+                <p><hr class="bg-slate-800 w-8 h-[2px]"></p>
+            </div>
+            <p class="text-center shrink-0">Masuk dengan</p>
+            <div class="flex flex-row items-center justify-evenly gap-4 shrink-0 mt-2">
+                <div class="flex flex-col gap-3 items-center justify-center">
+                    <a href="#" class="h-12 w-12 rounded-full grid place-items-center text-white bg-primary-teal fas fa-phone text-xl"></a>
+                    <p class="text-xs">Telepon</p>
+                </div>
+                <div class="flex flex-col gap-3 items-center justify-center">
+                    <a href="#" class="h-12 w-12 rounded-full grid place-items-center text-white bg-primary-teal fas fa-envelope text-xl"></a>
+                    <p class="text-xs">Email</p>
+                </div>
+                <div class="flex flex-col gap-3 items-center justify-center">   
+                    <a href="#" class="h-12 w-12 rounded-full grid place-items-center text-white bg-primary-teal fas fas fa-ellipsis text-xl"></a>
+                    <p class="text-xs">Telepon</p>
+                </div>
+            </div>
+            <p class="self-center text-center mt-10 text-sm">Belum punya akun? <a href="#" class="text-primary-teal hover:underline">Daftar</a></p>
+        </div> -->
+        <!-- Register Page 1 -->
+        <!-- <div class="overflow-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] flex flex-col gap-4 p-6" id="register-page-1">
+            <div class="w-full rounded overflow-hidden h-3 bg-slate-300 grid grid-cols-2">
+                <div class="bg-primary-teal"></div>
+            </div>
+            <div class="flex flex-row items-center justify-between shrink-0">
+                <p class="font-semibold text-2xl">Daftar</p>
+                <p class="fas fa-circle-question text-primary-teal text-2xl"></p>
+            </div>
+            <p class="text-lg leading-relaxed">Data pribadimu akan aman bersama SIGEMAS</p>
+            <div class="flex flex-col gap-3 mt-4 shrink-0">
+                <label for="fullname">Nama lengkap</label>
+                <input type="text" id="fullname" class="ring-1 rounded-md placeholder-shown:ring-slate-300 ring-primary-teal bg-transparent w-full p-4 h-12 transition-colors" placeholder="Masukkan nama lengkap anda">
+            </div>
+            <div class="flex flex-col gap-3 mt-4 shrink-0">
+                <label for="gender">Jenis Kelamin</label>
+                <input type="text" list="gender-list" id="gender" class="ring-1 rounded-md placeholder-shown:ring-slate-300 ring-primary-teal bg-transparent w-full p-4 h-12 transition-colors" placeholder="Masukkan jenis kelamin anda">
+                <datalist id="gender-list">
+                    <option value="Laki-laki"></option>
+                    <option value="Perempuan"></option>
+                </datalist>
+            </div>
+            <div class="flex flex-col gap-3 mt-4 shrink-0">
+                <label for="email">Alamat email</label>
+                <input type="email" id="email" class="ring-1 rounded-md placeholder-shown:ring-slate-300 ring-primary-teal bg-transparent w-full px-4 h-12 transition-colors" placeholder="Masukkan alamat email anda">
+            </div>
+            <div class="flex flex-col gap-3 mt-4 relative shrink-0">
+                <label for="password">Kata sandi</label>
+                <input type="password" id="password" class="ring-1 rounded-md placeholder-shown:ring-slate-300 ring-primary-teal bg-transparent w-full pl-4 pr-12 h-12 transition-colors" placeholder="Masukkan Kata sandi anda">
+                <label for="password" class="w-12 h-12 grid place-items-center fas fa-eye absolute right-0 bottom-0" id="show-pass-btn"></label>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed">Saya menyetujui kebijakan dan persyaratan yang berlaku.</p>
+            <button class="h-12 w-full rounded-md bg-primary-teal text-white mt-6 shrink-0 transition-colors hover:bg-active-teal">Daftar</button>
+            <p class="self-center text-center mt-4 text-sm">Sudah punya akun? <a href="#" class="text-primary-teal hover:underline">Masuk</a></p>
+        </div> -->
+        <!-- Register Page 2 -->
+        <!-- <div class="overflow-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] flex flex-col gap-4 p-6" id="register-page-2">
+            <div class="w-full rounded overflow-hidden h-3 bg-primary-teal grid grid-cols-2">
+                <div class="bg-slate-300"></div>
+            </div>  
+            <p class="font-semibold text-xl my-4 text-center">Bagaimana perasaanmu saat ini?</p>
+            <p class="text-center">Jawabanmu dapat membantu kami untuk merekomendasikan layanan sesuai kondisimu</p>
+            <div class="flex flex-col gap-6 mt-6">
+                <button class="ring-1 ring-primary-teal rounded-md h-14 flex flex-row items-center px-4 justify-between">
+                    <p>Sangat buruk</p>
+                    <p class="text-3xl">😡</p>
+                </button>
+                <button class="ring-1 ring-primary-teal rounded-md h-14 flex flex-row items-center px-4 justify-between">
+                    <p>Buruk</p>
+                    <p class="text-3xl">😢</p>
+                </button>
+                <button class="ring-1 ring-primary-teal rounded-md h-14 flex flex-row items-center px-4 justify-between">
+                    <p>Biasa</p>
+                    <p class="text-3xl">🙂</p>
+                </button>
+                <button class="ring-1 ring-primary-teal rounded-md h-14 flex flex-row items-center px-4 justify-between">
+                    <p>Senang</p>
+                    <p class="text-3xl">😊</p>
+                </button>
+                <button class="ring-1 ring-primary-teal rounded-md h-14 flex flex-row items-center px-4 justify-between">
+                    <p>Sangat senang</p>
+                    <p class="text-3xl">😄</p>
+                </button>
+            </div>
+            <button class="h-12 w-full rounded-md bg-primary-teal text-white mt-8 shrink-0 transition-colors hover:bg-active-teal">Daftar</button>
+        </div> -->
+        <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] flex flex-col" id="home-page">
+            <div class="flex flex-row items-center justify-center relative h-16 w-full px-6 bg-primary-teal text-white shrink-0">
+                <a href="#" class="fas fa-bars absolute left-6"></a>
+                <p class="font-semibold text-lg">SIGEMAS</p>
+            </div>
+            <div class="flex flex-col items-center relative h-max">
+                <div class="flex flex-row items-center shrink-0 overflow-x-auto h-max">
+                    <img src="https://i0.wp.com/antarpapua.com/wp-content/uploads/2024/07/watermark-antarpapua-10.png?w=1200&ssl=1" class="img-slide w-full h-full object-contain object-center shrink-0">
+                    <img src="https://i0.wp.com/antarpapua.com/wp-content/uploads/2024/07/watermark-antarpapua-10.png?w=1200&ssl=1" class="img-slide w-full h-full object-contain object-center shrink-0">
+                    <img src="https://i0.wp.com/antarpapua.com/wp-content/uploads/2024/07/watermark-antarpapua-10.png?w=1200&ssl=1" class="img-slide w-full h-full object-contain object-center shrink-0">
+                </div>
+                <div class="flex flex-col gap-3 absolute -bottom-6 px-6 w-full">
+                    <div class="flex flex-row items-center justify-center px-6 w-full gap-6">
+                        <span class="rounded-full bg-white bg-opacity-40 h-4 w-4 shadow slider-dot"></span>
+                        <span class="rounded-full bg-white bg-opacity-40 h-4 w-4 shadow slider-dot"></span>
+                        <span class="rounded-full bg-white bg-opacity-40 h-4 w-4 shadow slider-dot"></span>
+                    </div>
+                    <div class="flex flex-row items-center w-full relative">
+                        <label for="search" class="fas fa-magnifying-glass absolute w-12 h-12 grid place-items-center text-primary-teal"></label>
+                        <input type="text" id="search" placeholder="Kamu cari apa?" class="w-full text-sm rounded-md ring-1 pl-12 ring-primary-teal placeholder-shown:ring-slate-300 shadow-xl px-4 h-12">
+                    </div>
+                </div>
+            </div>
+            <div class="p-14 grid grid-cols-2 gap-6 h-full text-sm">
+                <div class="flex flex-col items-center gap-2 w-24">
+                    <div class="flex flex-col gap-2 rounded-md bg-primary-teal aspect-square w-full"></div>
+                    <p>Artikel</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 w-24">
+                    <div class="flex flex-col gap-2 rounded-md bg-primary-teal aspect-square w-full"></div>
+                    <p>Meditasi</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 w-24">
+                    <div class="flex flex-col gap-2 rounded-md bg-primary-teal aspect-square w-full"></div>
+                    <p>Journal Gemas</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 w-24">
+                    <div class="flex flex-col gap-2 rounded-md bg-primary-teal aspect-square w-full"></div>
+                    <p>Konseling</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 w-24">
+                    <div class="flex flex-col gap-2 rounded-md bg-primary-teal aspect-square w-full"></div>
+                    <p>Chat Gemas</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 w-24">
+                    <div class="flex flex-col gap-2 rounded-md bg-primary-teal aspect-square w-full"></div>
+                    <p>Suara tenang</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 w-24">
+                    <div class="flex flex-col gap-2 rounded-md bg-primary-teal aspect-square w-full"></div>
+                    <p>Profil</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 w-24">
+                    <div class="flex flex-col gap-2 rounded-md bg-primary-teal aspect-square w-full"></div>
+                    <p>Gemas Pet</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        
+    </script>
+</html>
