@@ -183,7 +183,7 @@
                     <p>Suara tenang</p>
                 </div>
                 <div class="flex flex-col items-center gap-2 w-32 justify-self-center">
-                    <a href="#account" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
+                    <a href="#profile" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
                         <img src="./img/account-icon.PNG" class="w-full h-full object-center object-cover">
                     </a>
                     <p>Profil</p>
@@ -621,6 +621,24 @@
             </div>
             <div class="flex flex-col w-full min-h-full">
                 <img src="./img/pet3-img.PNG" class="object-cover object-center w-full h-full">
+            </div>
+        </div>
+        <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden transition-opacity opacity-0 flex-col pages" id="profile">
+            <div class="flex flex-row items-center justify-center relative h-16 w-full px-6 bg-primary-teal text-white shrink-0">
+                <a href="#dashboard" class="fas fa-chevron-left absolute left-6"></a>
+                <p class="font-semibold text-lg">PROFILE</p>
+            </div>
+            <div class="flex flex-col w-full min-h-full text-center items-center p-6 gap-4">
+                <img src="./img/avatar.png" class="w-48 h-48 object-center objec-cover aspect-square">
+                <div class="flex flex-col">
+                    <p class="font-bold text-2xl">Afandi</p>
+                    <p>afandi@gmail.com</p>
+                </div>
+                <button class="w-full h-12 hover:bg-active-teal mt-4 rounded-md bg-primary-teal text-white">Ubah profil</button>
+                <button class="w-full h-12 hover:bg-active-teal rounded-md bg-primary-teal text-white">Ubah kata sandi</button>
+                <button class="w-full h-12 hover:bg-active-teal rounded-md bg-primary-teal text-white">Chat admin</button>
+                <button class="w-full h-12 hover:bg-active-teal rounded-md bg-primary-teal text-white">Hubungkan rekening bank atau E-Wallet</button>
+                <button class="w-full h-12 hover:bg-active-teal rounded-md bg-primary-teal text-white">Keluar</button>
             </div>
         </div>
     </body>

@@ -5,6 +5,7 @@
     text-rendering: optimizeLegibility;
     box-sizing: border-box;
     outline: none;
+    image-rendering: optimizeQuality;
 }
 
 *:not(.far,.fas,.fab){
