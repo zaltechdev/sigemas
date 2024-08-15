@@ -6,21 +6,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/custom.css">
         <link rel="stylesheet" href="./css/styles.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
-        <title></title>
+        <script src="./js/jquery.js"></script>
+        <title>Selamat datang!</title>
     </head>
-    <body class="w-full h-[100dvh] bg-black flex flex-col items-center">
+    <body class="w-full h-[100dvh] bg-cyan-50 flex flex-col items-center">
         <!-- Welcome -->
-        <!-- <div class="page w-full sm:w-96 bg-cyan-50 h-[100dvh] flex flex-col items-center justify-center gap-4 p-16" id="welcome-page">
+        <div class="page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden opacity-0 transition-opacity flex-col items-center justify-center gap-4 p-16 pages" id="welcome">
             <img src="./img/welcome-img.png" alt="SiGemas App" class="w-56 h-max object-cover object-right mr-2">
             <p class="font-bold text-lg text-center text-primary-teal">"Tarik nafas yang dalam,<br>lalu hembuskan perlahan.."</p>
-            <button class="rounded-md h-12 w-full bg-disabled-teal hover:bg-secondary-teal transition-colors text-primary-teal mt-16">Login</button>
-            <button class="rounded-md h-12 w-full bg-primary-teal hover:bg-active-teal transition-colors text-white">Sign Up</button>
+            <a href="#login" class="grid place-items-center rounded-md min-h-12 w-full bg-disabled-teal hover:bg-secondary-teal transition-colors text-primary-teal mt-12 page-btn">Login</a>
+            <a href="#register" class="grid place-items-center rounded-md min-h-12 w-full bg-primary-teal hover:bg-active-teal transition-colors text-white page-btn">Sign Up</a>
             <a href="#" class="text-center mt-2 text-primary-teal text-sm hover:underline">Lupa kata sandi?</a>
-        </div> -->
+        </div>
         <!-- Login -->
-        <!-- <div class="overflow-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] flex flex-col gap-4 p-6" id="login-page">
+        <div class="overflow-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden opacity-0 transition-opacity flex-col gap-4 p-6 pages" id="login">
             <div class="flex flex-row items-center justify-between shrink-0">
                 <p class="font-semibold text-2xl">Masuk</p>
                 <p class="fas fa-circle-question text-primary-teal text-2xl"></p>
@@ -30,12 +29,12 @@
                 <input type="text" id="account" class="ring-1 rounded-md placeholder-shown:ring-slate-300 ring-primary-teal bg-transparent w-full px-4 h-12 transition-colors" placeholder="Masukkan email anda">
             </div>
             <div class="flex flex-col gap-3 mt-4 relative shrink-0">
-                <label for="password">Kata sandi</label>
-                <input type="password" id="password" class="ring-1 rounded-md placeholder-shown:ring-slate-300 ring-primary-teal bg-transparent w-full pl-4 pr-12 h-12 transition-colors" placeholder="Masukkan email anda">
-                <label for="password" class="w-12 h-12 grid place-items-center fas fa-eye absolute right-0 bottom-0" id="show-pass-btn"></label>
+                <label for="login-password">Kata sandi</label>
+                <input type="login-password" id="login-password" class="ring-1 rounded-md placeholder-shown:ring-slate-300 ring-primary-teal bg-transparent w-full pl-4 pr-12 h-12 transition-colors" placeholder="Masukkan email anda">
+                <label for="login-password" class="w-12 h-12 grid place-items-center fas fa-eye absolute right-0 bottom-0" id="show-pass-btn-login"></label>
             </div>
             <a href="#" class="text-left mt-2 text-primary-teal text-sm shrink-0 hover:underline">Lupa kata sandi?</a>
-            <button class="h-12 w-full rounded-md bg-primary-teal transition-colors hover:bg-active-teal text-white mt-10 shrink-0">Masuk</button>
+            <a href="#dashboard" class="h-12 w-full rounded-md bg-primary-teal transition-colors hover:bg-active-teal text-white mt-10 shrink-0 page-btn grid place-items-center">Masuk</a>
             <div class="flex flex-row items-center gap-2 self-center my-3 font-medium shrink-0">
                 <p><hr class="bg-slate-800 w-8 h-[2px]"></p>
                 <p>atau</p>
@@ -56,10 +55,10 @@
                     <p class="text-xs">Telepon</p>
                 </div>
             </div>
-            <p class="self-center text-center mt-10 text-sm">Belum punya akun? <a href="#" class="text-primary-teal hover:underline">Daftar</a></p>
-        </div> -->
+            <p class="self-center text-center mt-10 text-sm">Belum punya akun? <a href="#register" class="text-primary-teal hover:underline page-btn">Daftar</a></p>
+        </div>
         <!-- Register Page 1 -->
-        <!-- <div class="overflow-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] flex flex-col gap-4 p-6" id="register-page-1">
+        <div class="overflow-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden opacity-0 transition-opacity flex-col gap-4 p-6 pages" id="register">
             <div class="w-full rounded overflow-hidden h-3 bg-slate-300 grid grid-cols-2">
                 <div class="bg-primary-teal"></div>
             </div>
@@ -85,48 +84,49 @@
                 <input type="email" id="email" class="ring-1 rounded-md placeholder-shown:ring-slate-300 ring-primary-teal bg-transparent w-full px-4 h-12 transition-colors" placeholder="Masukkan alamat email anda">
             </div>
             <div class="flex flex-col gap-3 mt-4 relative shrink-0">
-                <label for="password">Kata sandi</label>
-                <input type="password" id="password" class="ring-1 rounded-md placeholder-shown:ring-slate-300 ring-primary-teal bg-transparent w-full pl-4 pr-12 h-12 transition-colors" placeholder="Masukkan Kata sandi anda">
-                <label for="password" class="w-12 h-12 grid place-items-center fas fa-eye absolute right-0 bottom-0" id="show-pass-btn"></label>
+                <label for="register-password">Kata sandi</label>
+                <input type="register-password" id="register-password" class="ring-1 rounded-md placeholder-shown:ring-slate-300 ring-primary-teal bg-transparent w-full pl-4 pr-12 h-12 transition-colors" placeholder="Masukkan Kata sandi anda">
+                <label for="register-password" class="w-12 h-12 grid place-items-center fas fa-eye absolute right-0 bottom-0" id="show-pass-btn-register"></label>
             </div>
             <p class="text-xs text-slate-400 leading-relaxed">Saya menyetujui kebijakan dan persyaratan yang berlaku.</p>
-            <button class="h-12 w-full rounded-md bg-primary-teal text-white mt-6 shrink-0 transition-colors hover:bg-active-teal">Daftar</button>
-            <p class="self-center text-center mt-4 text-sm">Sudah punya akun? <a href="#" class="text-primary-teal hover:underline">Masuk</a></p>
-        </div> -->
+            <a href="#survei-emosional" class="grid place-items-center h-12 w-full rounded-md bg-primary-teal text-white mt-6 shrink-0 transition-colors hover:bg-active-teal page-btn">Daftar</a>
+            <p class="self-center text-center mt-4 text-sm">Sudah punya akun? <a href="#login" class="text-primary-teal hover:underline page-btn">Masuk</a></p>
+        </div>
         <!-- Register Page 2 -->
-        <!-- <div class="overflow-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] flex flex-col gap-4 p-6" id="register-page-2">
+        <div class="overflow-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden opacity-0 transition-opacity flex-col gap-4 p-6 pages" id="survei-emosional">
             <div class="w-full rounded overflow-hidden h-3 bg-primary-teal grid grid-cols-2">
                 <div class="bg-slate-300"></div>
             </div>  
             <p class="font-semibold text-xl my-4 text-center">Bagaimana perasaanmu saat ini?</p>
             <p class="text-center">Jawabanmu dapat membantu kami untuk merekomendasikan layanan sesuai kondisimu</p>
             <div class="flex flex-col gap-6 mt-6">
-                <button class="ring-1 ring-primary-teal rounded-md h-14 flex flex-row items-center px-4 justify-between">
+                <button class="ring-1 ring-disabled-teal transition-colors hover:ring-active-teal rounded-md h-14 flex flex-row items-center px-4 justify-between">
                     <p>Sangat buruk</p>
                     <p class="text-3xl">😡</p>
                 </button>
-                <button class="ring-1 ring-primary-teal rounded-md h-14 flex flex-row items-center px-4 justify-between">
+                <button class="ring-1 ring-disabled-teal transition-colors hover:ring-active-teal rounded-md h-14 flex flex-row items-center px-4 justify-between">
                     <p>Buruk</p>
                     <p class="text-3xl">😢</p>
                 </button>
-                <button class="ring-1 ring-primary-teal rounded-md h-14 flex flex-row items-center px-4 justify-between">
+                <button class="ring-1 ring-disabled-teal transition-colors hover:ring-active-teal rounded-md h-14 flex flex-row items-center px-4 justify-between">
                     <p>Biasa</p>
                     <p class="text-3xl">🙂</p>
                 </button>
-                <button class="ring-1 ring-primary-teal rounded-md h-14 flex flex-row items-center px-4 justify-between">
+                <button class="ring-1 ring-disabled-teal transition-colors hover:ring-active-teal rounded-md h-14 flex flex-row items-center px-4 justify-between">
                     <p>Senang</p>
                     <p class="text-3xl">😊</p>
                 </button>
-                <button class="ring-1 ring-primary-teal rounded-md h-14 flex flex-row items-center px-4 justify-between">
+                <button class="ring-1 ring-disabled-teal transition-colors hover:ring-active-teal rounded-md h-14 flex flex-row items-center px-4 justify-between">
                     <p>Sangat senang</p>
                     <p class="text-3xl">😄</p>
                 </button>
             </div>
-            <button class="h-12 w-full rounded-md bg-primary-teal text-white mt-8 shrink-0 transition-colors hover:bg-active-teal">Daftar</button>
-        </div> -->
-        <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] flex flex-col" id="home-page">
+            <a href="#dashboard" class="grid place-items-center h-12 w-full rounded-md bg-primary-teal text-white mt-8 shrink-0 transition-colors hover:bg-active-teal page-btn">Daftar</a>
+        </div>
+        <!-- Dashboard / Beranda -->
+        <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden transition-opacity opacity-0 flex-col relative pages" id="dashboard">
             <div class="flex flex-row items-center justify-center relative h-16 w-full px-6 bg-primary-teal text-white shrink-0">
-                <a href="#" class="fas fa-bars absolute left-6"></a>
+                <button onclick="$('#dashboard-slide-menu').removeClass('-translate-x-full');$('#dashboard').css('overflow-y','hidden')" class="fas fa-bars absolute left-6"></button>
                 <p class="font-semibold text-lg">SIGEMAS</p>
             </div>
             <div class="flex flex-col items-center relative h-max">
@@ -143,63 +143,205 @@
                     </div>
                     <div class="flex flex-row items-center w-full relative">
                         <label for="search" class="fas fa-magnifying-glass absolute w-12 h-12 grid place-items-center text-primary-teal"></label>
-                        <input type="text" id="search" placeholder="Kamu cari apa?" class="w-full text-sm rounded-md ring-1 pl-12 ring-primary-teal placeholder-shown:ring-slate-300 shadow-xl px-4 h-12">
+                        <input type="text" id="search" placeholder="Kamu cari apa?" class="w-full text-sm rounded-md ring-1 pl-12 ring-primary-teal placeholder-shown:ring-slate-300 shadow-lg px-4 h-12">
                     </div>
                 </div>
             </div>
             <div class="pt-16 p-6 flex flex-row justify-evenly flex-wrap gap-4 h-max text-sm">
                 <div class="flex flex-col items-center gap-2 w-32">
-                    <a href="#artikel" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80">
+                    <a href="#artikel" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
                         <img src="./img/paper-icon.PNG" class="w-full h-full object-center object-cover">
                     </a>
                     <p>Artikel</p>
                 </div>
                 <div class="flex flex-col items-center gap-2 w-32">
-                    <a href="#meditasi" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80">
+                    <a href="#meditasi" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
                         <img src="./img/meditasi-icon.PNG" class="w-full h-full object-center object-cover">
                     </a>
                     <p>Meditasi</p>
                 </div>
                 <div class="flex flex-col items-center gap-2 w-32">
-                    <a href="#jurnal" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80">
+                    <a href="#jurnal-gemas" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
                         <img src="./img/wrtiting-icon.PNG" class="w-full h-full object-center object-cover">
                     </a>
                     <p>Journal Gemas</p>
                 </div>
                 <div class="flex flex-col items-center gap-2 w-32">
-                    <a href="#konseling" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80">
+                    <a href="#konseling" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
                         <img src="./img/face2face-icon.PNG" class="w-full h-full object-center object-cover">
                     </a>
                     <p>Konseling</p>
                 </div>
                 <div class="flex flex-col items-center gap-2 w-32">
-                    <a href="#chatroom" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80">
+                    <a href="#chatroom" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
                         <img src="./img/chatbubble-icon.PNG" class="w-full h-full object-center object-cover">
                     </a>
                     <p>Chat Gemas</p>
                 </div>
                 <div class="flex flex-col items-center gap-2 w-32">
-                    <a href="#suaratenang" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80">
+                    <a href="#suara-tenang" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
                         <img src="./img/speaker-icon.PNG" class="w-full h-full object-center object-cover">
                     </a>
                     <p>Suara tenang</p>
                 </div>
                 <div class="flex flex-col items-center gap-2 w-32">
-                    <a href="#account" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80">
+                    <a href="#account" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
                         <img src="./img/account-icon.PNG" class="w-full h-full object-center object-cover">
                     </a>
                     <p>Profil</p>
                 </div>
                 <div class="flex flex-col items-center gap-2 w-32">
-                    <a class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80">
+                    <a href="#gemas-pet" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
                         <img src="./img/maskot-icon.PNG" class="w-full h-full object-center object-cover">
                     </a>
                     <p>Gemas Pet</p>
                 </div>
             </div>
+            <div class="absolute z-10 top-0 left-0 transition -translate-x-full w-full text-white bg-primary-teal h-dvh p-4 pt-0 flex flex-col" id="dashboard-slide-menu">
+                <div class="flex flex-row items-center justify-start gap-4 w-max h-16">
+                    <button class="fas fa-chevron-left pl-4" onclick="$('#dashboard-slide-menu').addClass('-translate-x-full');$('#dashboard').css('overflow-y','auto')"></button>
+                    <p class="text-lg font-semibold">Pengaturan</p>
+                </div>
+                <div class="flex flex-col gap-4 mt-2">
+                    <button class="flex flex-row items-center gap-4 w-full justify-between h-12 rounded-md hover:bg-active-teal px-4">
+                        <p>Kebijakan Privasi</p>
+                        <p class="fas fa-chevron-right text-lg"></p>
+                    </button>
+                    <button class="flex flex-row items-center gap-4 w-full justify-between h-12 rounded-md hover:bg-active-teal px-4">
+                        <p>Sinkronisasi Data</p>
+                        <p class="fas fa-chevron-right text-lg"></p>
+                    </button>
+                    <button class="flex flex-row items-center justify-between w-full gap-4 h-12 rounded-md hover:bg-active-teal px-4">
+                        <p>Bahasa</p>
+                        <div class="flex flex-row items-center gap-4">
+                            <p class="text-sm text-yellow-400">Indonesia</p>
+                            <p class="fas fa-chevron-right text-lg"></p>
+                        </div>
+                    </button>
+                    <button class="flex flex-row items-center justify-between w-full gap-4 h-12 rounded-md hover:bg-active-teal px-4">
+                        <p>Tampilan</p>
+                        <div class="flex flex-row items-center gap-4">
+                            <p class="text-sm text-yellow-400">Mode Siang</p>
+                            <p class="fas fa-chevron-right text-lg"></p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden transition-opacity opacity-0 flex-col relative pages" id="artikel">
+            <div class="flex flex-row items-center justify-center relative h-16 w-full px-6 bg-primary-teal text-white shrink-0">
+                <a href="#dashboard" class="fas fa-chevron-left absolute left-6"></a>
+                <p class="font-semibold text-lg">ARTIKEL</p>
+            </div>
+            <div class="flex flex-col p-6 gap-4 shrink-0">
+                <div class="flex flex-row items-center gap-4">
+                    <p class="far fa-user-circle text-5xl text-primary-teal"></p>
+                    <div class="flex flex-col">
+                        <p class="font-semibold text-xl">Hai, Afandi</p>
+                        <p class="text-sm text-slate-500">Bagaimana kabarmu saat ini?</p>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-4 justify-between text-center">
+                    <div class="flex flex-col gap-2">
+                        <p class="text-3xl">😡</p>
+                        <p class="text-sm">Buruk</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <p class="text-3xl">😢</p>
+                        <p class="text-sm">Kurang</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <p class="text-3xl">🙂</p>
+                        <p class="text-sm">Biasa</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <p class="text-3xl">😊</p>
+                        <p class="text-sm">Senang</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <p class="text-3xl">😃</p>
+                        <p class="text-sm">Bahagia</p>
+                    </div>
+                </div>
+                <hr class="bg-disabled-teal h-[2px] shrink-0">
+                <div class="bg-cyan-500 w-full rounded-md flex flex-col items-center gap-4 p-4 bg-opacity-20 shrink-0">
+                    <p class="font-semibold text-active-teal text-xl">Ketahui Kesehatan Mentalmu</p>
+                    <a href="#" class="px-6 py-2 rounded-full bg-primary-teal text-white">Mulai Tes</a>
+                </div>
+                <hr class="bg-disabled-teal h-[2px] shrink-0">
+                <div class="flex flex-row items-center justify-between shrink-0">
+                    <p class="font-semibold">Artikel yang bisa kamu baca</p>
+                    <a href="#" class="text-secondary-teal text-sm">Lihat semua</a>
+                </div>
+                <div class="grid grid-cols-2 shrink-0 text-white gap-4 text-sm"> 
+                    <a href="#" class="rounded-xl bg-primary-teal p-2 flex flex-col gap-4 hover:bg-active-teal transition-colors">
+                        <img src="./img/woman-mirror.PNG" class="object-cover objec-center min-w-full rounded-lg aspect-square">
+                        <p>Yuk mengenal lebih dalam apa itu self diagnose?</p>
+                    </a>
+                    <a href="#" class="rounded-xl bg-primary-teal p-2 flex flex-col gap-4 hover:bg-active-teal transition-colors">
+                        <img src="./img/boy-sad.PNG" class="object-cover objec-center min-w-full rounded-lg aspect-square">
+                        <p>Apakah insecure dapat mempengaruhi mental remaja?</p>
+                    </a>
+                    <a href="#" class="rounded-xl bg-primary-teal p-2 flex flex-col gap-4 hover:bg-active-teal transition-colors">
+                        <img src="./img/privilege-sign.PNG" class="object-cover objec-center min-w-full rounded-lg aspect-square">
+                        <p>Pretty privilege di media sosial dan psikologis remaja?</p>
+                    </a>
+                    <a href="#" class="rounded-xl bg-primary-teal p-2 flex flex-col gap-4 hover:bg-active-teal transition-colors">
+                        <img src="./img/woman-mirror-love.PNG" class="object-cover objec-center min-w-full rounded-lg aspect-square">
+                        <p>Berdamai dengan diri, bagaimana caranya?</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden transition-opacity opacity-0 flex-col relative pages" id="meditasi">
+            <div class="flex flex-row items-center justify-center relative h-16 w-full px-6 bg-primary-teal text-white shrink-0">
+                <a href="#dashboard" class="fas fa-chevron-left absolute left-6"></a>
+                <p class="font-semibold text-lg">MEDITASI</p>
+            </div>
         </div>
     </body>
     <script>
-        
+        const PageRouter = () => {
+            setTimeout(() => {
+                const queryParam = window.location.hash
+                if(queryParam && queryParam !== "#"){
+                    var result = ""
+                    result += queryParam.split("#")[1].split("-")[0]
+                    let word2 = queryParam.split("#")[1].split("-")[1]
+                    if(word2 !== undefined){
+                        result += " " + word2
+                    }
+                    document.title = result.charAt(0).toUpperCase() + result.slice(1);
+                    
+                    $(".pages").removeClass("opacity-1")
+                    $(".pages").addClass("opacity-0")
+                    setTimeout(() => {
+                        $(".pages").removeClass("flex")
+                        $(".pages").addClass("hidden")
+                            $("" + queryParam).removeClass("hidden")
+                            $("" + queryParam).addClass("flex")
+                            setTimeout(() => {
+                                $("" + queryParam).removeClass("opacity-0")
+                                $("" + queryParam).addClass("opacity-1")
+                            },100)       
+                    }, 200);
+                }
+                else{
+                    window.location.href="#welcome"
+                }
+            },200)
+        }
+
+        $(document).ready(function () {
+            PageRouter()
+        })
+
+        $(".page-btn").click(() => {
+            PageRouter()
+        })
+
+        $(window).on("popstate", () => [
+            PageRouter()
+        ])
     </script>
 </html>
