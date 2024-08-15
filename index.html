@@ -16,7 +16,7 @@
             <p class="font-bold text-lg text-center text-primary-teal">"Tarik nafas yang dalam,<br>lalu hembuskan perlahan.."</p>
             <a href="#login" class="grid place-items-center rounded-md min-h-12 w-full bg-disabled-teal hover:bg-secondary-teal transition-colors text-primary-teal mt-12 page-btn">Login</a>
             <a href="#register" class="grid place-items-center rounded-md min-h-12 w-full bg-primary-teal hover:bg-active-teal transition-colors text-white page-btn">Sign Up</a>
-            <a href="#" class="text-center mt-2 text-primary-teal text-sm hover:underline">Lupa kata sandi?</a>
+            <p class="text-center mt-2 text-primary-teal text-sm hover:underline">Lupa kata sandi?</p>
         </div>
         <!-- Login -->
         <div class="overflow-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden opacity-0 transition-opacity flex-col gap-4 p-6 pages" id="login">
@@ -33,7 +33,7 @@
                 <input type="login-password" id="login-password" class="ring-1 rounded-md placeholder-shown:ring-slate-300 ring-primary-teal bg-transparent w-full pl-4 pr-12 h-12 transition-colors" placeholder="Masukkan email anda">
                 <label for="login-password" class="w-12 h-12 grid place-items-center fas fa-eye absolute right-0 bottom-0" id="show-pass-btn-login"></label>
             </div>
-            <a href="#" class="text-left mt-2 text-primary-teal text-sm shrink-0 hover:underline">Lupa kata sandi?</a>
+            <p class="text-left mt-2 text-primary-teal text-sm shrink-0 hover:underline">Lupa kata sandi?</p>
             <a href="#dashboard" class="h-12 w-full rounded-md bg-primary-teal transition-colors hover:bg-active-teal text-white mt-10 shrink-0 page-btn grid place-items-center">Masuk</a>
             <div class="flex flex-row items-center gap-2 self-center my-3 font-medium shrink-0">
                 <p><hr class="bg-slate-800 w-8 h-[2px]"></p>
@@ -43,15 +43,15 @@
             <p class="text-center shrink-0">Masuk dengan</p>
             <div class="flex flex-row items-center justify-evenly gap-4 shrink-0 mt-2">
                 <div class="flex flex-col gap-3 items-center justify-center">
-                    <a href="#" class="h-12 w-12 rounded-full grid place-items-center text-white bg-primary-teal fas fa-phone text-xl"></a>
+                    <p class="h-12 w-12 rounded-full grid place-items-center text-white bg-primary-teal fas fa-phone text-xl"></p>
                     <p class="text-xs">Telepon</p>
                 </div>
                 <div class="flex flex-col gap-3 items-center justify-center">
-                    <a href="#" class="h-12 w-12 rounded-full grid place-items-center text-white bg-primary-teal fas fa-envelope text-xl"></a>
+                    <p class="h-12 w-12 rounded-full grid place-items-center text-white bg-primary-teal fas fa-envelope text-xl"></p>
                     <p class="text-xs">Email</p>
                 </div>
                 <div class="flex flex-col gap-3 items-center justify-center">   
-                    <a href="#" class="h-12 w-12 rounded-full grid place-items-center text-white bg-primary-teal fas fas fa-ellipsis text-xl"></a>
+                    <p class="h-12 w-12 rounded-full grid place-items-center text-white bg-primary-teal fas fas fa-ellipsis text-xl"></p>
                     <p class="text-xs">Telepon</p>
                 </div>
             </div>
@@ -126,13 +126,11 @@
         <!-- Dashboard / Beranda -->
         <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden transition-opacity opacity-0 flex-col relative pages" id="dashboard">
             <div class="flex flex-row items-center justify-center relative h-16 w-full px-6 bg-primary-teal text-white shrink-0">
-                <button onclick="$('#dashboard-slide-menu').removeClass('-translate-x-full');$('#dashboard').css('overflow-y','hidden')" class="fas fa-bars absolute left-6"></button>
+                <button onclick="$('#dashboard-slide-menu').removeClass('-translate-x-[110%]');$('#dashboard').css('overflow-y','hidden')" class="fas fa-bars absolute left-6"></button>
                 <p class="font-semibold text-lg">SIGEMAS</p>
             </div>
             <div class="flex flex-col items-center relative h-max">
                 <div class="flex flex-row items-center shrink-0 overflow-x-auto h-max">
-                    <img src="https://i0.wp.com/antarpapua.com/wp-content/uploads/2024/07/watermark-antarpapua-10.png?w=1200&ssl=1" class="img-slide w-full h-full object-contain object-center shrink-0">
-                    <img src="https://i0.wp.com/antarpapua.com/wp-content/uploads/2024/07/watermark-antarpapua-10.png?w=1200&ssl=1" class="img-slide w-full h-full object-contain object-center shrink-0">
                     <img src="https://i0.wp.com/antarpapua.com/wp-content/uploads/2024/07/watermark-antarpapua-10.png?w=1200&ssl=1" class="img-slide w-full h-full object-contain object-center shrink-0">
                 </div>
                 <div class="flex flex-col gap-3 absolute -bottom-6 px-6 w-full">
@@ -147,59 +145,59 @@
                     </div>
                 </div>
             </div>
-            <div class="pt-16 p-6 flex flex-row justify-evenly flex-wrap gap-4 h-max text-sm">
-                <div class="flex flex-col items-center gap-2 w-32">
+            <div class="pt-16 p-6 grid grid-cols-2 gap-4 h-max text-sm">
+                <div class="flex flex-col items-center gap-2 w-32 justify-self-center">
                     <a href="#artikel" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
                         <img src="./img/paper-icon.PNG" class="w-full h-full object-center object-cover">
                     </a>
                     <p>Artikel</p>
                 </div>
-                <div class="flex flex-col items-center gap-2 w-32">
+                <div class="flex flex-col items-center gap-2 w-32 justify-self-center">
                     <a href="#meditasi" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
                         <img src="./img/meditasi-icon.PNG" class="w-full h-full object-center object-cover">
                     </a>
                     <p>Meditasi</p>
                 </div>
-                <div class="flex flex-col items-center gap-2 w-32">
+                <div class="flex flex-col items-center gap-2 w-32 justify-self-center">
                     <a href="#jurnal-gemas" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
                         <img src="./img/wrtiting-icon.PNG" class="w-full h-full object-center object-cover">
                     </a>
                     <p>Journal Gemas</p>
                 </div>
-                <div class="flex flex-col items-center gap-2 w-32">
+                <div class="flex flex-col items-center gap-2 w-32 justify-self-center">
                     <a href="#konseling" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
                         <img src="./img/face2face-icon.PNG" class="w-full h-full object-center object-cover">
                     </a>
                     <p>Konseling</p>
                 </div>
-                <div class="flex flex-col items-center gap-2 w-32">
-                    <a href="#chatroom" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
+                <div class="flex flex-col items-center gap-2 w-32 justify-self-center">
+                    <a href="#chat-gemas" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
                         <img src="./img/chatbubble-icon.PNG" class="w-full h-full object-center object-cover">
                     </a>
                     <p>Chat Gemas</p>
                 </div>
-                <div class="flex flex-col items-center gap-2 w-32">
+                <div class="flex flex-col items-center gap-2 w-32 justify-self-center">
                     <a href="#suara-tenang" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
                         <img src="./img/speaker-icon.PNG" class="w-full h-full object-center object-cover">
                     </a>
                     <p>Suara tenang</p>
                 </div>
-                <div class="flex flex-col items-center gap-2 w-32">
+                <div class="flex flex-col items-center gap-2 w-32 justify-self-center">
                     <a href="#account" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
                         <img src="./img/account-icon.PNG" class="w-full h-full object-center object-cover">
                     </a>
                     <p>Profil</p>
                 </div>
-                <div class="flex flex-col items-center gap-2 w-32">
+                <div class="flex flex-col items-center gap-2 w-32 justify-self-center">
                     <a href="#gemas-pet" class="flex flex-col p-4 rounded-md bg-primary-teal aspect-video w-full hover:opacity-80 page-btn">
                         <img src="./img/maskot-icon.PNG" class="w-full h-full object-center object-cover">
                     </a>
                     <p>Gemas Pet</p>
                 </div>
             </div>
-            <div class="absolute z-10 top-0 left-0 transition -translate-x-full w-full text-white bg-primary-teal h-dvh p-4 pt-0 flex flex-col" id="dashboard-slide-menu">
+            <div class="absolute z-10 top-0 left-0 transition -translate-x-[110%] w-full text-white bg-primary-teal h-dvh p-4 pt-0 flex flex-col" id="dashboard-slide-menu">
                 <div class="flex flex-row items-center justify-start gap-4 w-max h-16">
-                    <button class="fas fa-chevron-left pl-4" onclick="$('#dashboard-slide-menu').addClass('-translate-x-full');$('#dashboard').css('overflow-y','auto')"></button>
+                    <button class="fas fa-chevron-left pl-4" onclick="$('#dashboard-slide-menu').addClass('-translate-x-[110%]');$('#dashboard').css('overflow-y','auto')"></button>
                     <p class="text-lg font-semibold">Pengaturan</p>
                 </div>
                 <div class="flex flex-col gap-4 mt-2">
@@ -235,7 +233,7 @@
             </div>
             <div class="flex flex-col p-6 gap-4 shrink-0">
                 <div class="flex flex-row items-center gap-4">
-                    <p class="far fa-user-circle text-5xl text-primary-teal"></p>
+                    <img src="./img/avatar.png" class="object-center object-cover w-12 h-12 aspect-square">
                     <div class="flex flex-col">
                         <p class="font-semibold text-xl">Hai, Afandi</p>
                         <p class="text-sm text-slate-500">Bagaimana kabarmu saat ini?</p>
@@ -266,30 +264,30 @@
                 <hr class="bg-disabled-teal h-[2px] shrink-0">
                 <div class="bg-cyan-500 w-full rounded-md flex flex-col items-center gap-4 p-4 bg-opacity-20 shrink-0">
                     <p class="font-semibold text-active-teal text-xl">Ketahui Kesehatan Mentalmu</p>
-                    <a href="#" class="px-6 py-2 rounded-full bg-primary-teal text-white">Mulai Tes</a>
+                    <p class="px-6 py-2 rounded-full bg-primary-teal text-white">Mulai Tes</p>
                 </div>
                 <hr class="bg-disabled-teal h-[2px] shrink-0">
                 <div class="flex flex-row items-center justify-between shrink-0">
                     <p class="font-semibold">Artikel yang bisa kamu baca</p>
-                    <a href="#" class="text-secondary-teal text-sm">Lihat semua</a>
+                    <p class="text-secondary-teal text-sm">Lihat semua</p>
                 </div>
                 <div class="grid grid-cols-2 shrink-0 text-white gap-4 text-sm"> 
-                    <a href="#" class="rounded-xl bg-primary-teal p-2 flex flex-col gap-4 hover:bg-active-teal transition-colors">
+                    <div class="rounded-xl bg-primary-teal p-2 flex flex-col gap-4 hover:bg-active-teal transition-colors">
                         <img src="./img/woman-mirror.PNG" class="object-cover objec-center min-w-full rounded-lg aspect-square">
                         <p>Yuk mengenal lebih dalam apa itu self diagnose?</p>
-                    </a>
-                    <a href="#" class="rounded-xl bg-primary-teal p-2 flex flex-col gap-4 hover:bg-active-teal transition-colors">
+                    </div>
+                    <div class="rounded-xl bg-primary-teal p-2 flex flex-col gap-4 hover:bg-active-teal transition-colors">
                         <img src="./img/boy-sad.PNG" class="object-cover objec-center min-w-full rounded-lg aspect-square">
                         <p>Apakah insecure dapat mempengaruhi mental remaja?</p>
-                    </a>
-                    <a href="#" class="rounded-xl bg-primary-teal p-2 flex flex-col gap-4 hover:bg-active-teal transition-colors">
+                    </div>
+                    <div class="rounded-xl bg-primary-teal p-2 flex flex-col gap-4 hover:bg-active-teal transition-colors">
                         <img src="./img/privilege-sign.PNG" class="object-cover objec-center min-w-full rounded-lg aspect-square">
                         <p>Pretty privilege di media sosial dan psikologis remaja?</p>
-                    </a>
-                    <a href="#" class="rounded-xl bg-primary-teal p-2 flex flex-col gap-4 hover:bg-active-teal transition-colors">
+                    </div>
+                    <div class="rounded-xl bg-primary-teal p-2 flex flex-col gap-4 hover:bg-active-teal transition-colors">
                         <img src="./img/woman-mirror-love.PNG" class="object-cover objec-center min-w-full rounded-lg aspect-square">
                         <p>Berdamai dengan diri, bagaimana caranya?</p>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -297,6 +295,332 @@
             <div class="flex flex-row items-center justify-center relative h-16 w-full px-6 bg-primary-teal text-white shrink-0">
                 <a href="#dashboard" class="fas fa-chevron-left absolute left-6"></a>
                 <p class="font-semibold text-lg">MEDITASI</p>
+            </div>
+            <div class="flex flex-col gap-4 p-6 shrink-0">
+                <p class="font-semibold text-xl">Topik Meditasi</p>
+                <div class="flex flex-row items-center gap-4 p-4 rounded-xl bg-primary-teal w-full hover:opacity-80 transition-opacity">
+                    <img src="./img/lily-flower-icon.PNG" class="object-cover object-center aspect-square w-28">
+                    <div class="flex flex-col text-white gap-2">
+                        <p class="font-semibold text-lg">Belajar meditasi yukk!</p>
+                        <p>Meditasi itu sederhana, yuk kita coba!</p>
+                    </div>
+                </div>
+                <div class="flex flex-row items-center gap-4 p-4 rounded-xl bg-primary-teal w-full hover:opacity-80 transition-opacity">
+                    <img src="./img/pillow-icon.PNG" class="object-cover object-center aspect-square w-28">
+                    <div class="flex flex-col text-white gap-2">
+                        <p class="font-semibold text-lg">Meditasi tidur yukk!</p>
+                        <p>Mari pelajari tidur berkualitas untuk hari esok yang baik</p>
+                    </div>
+                </div>
+                <div class="flex flex-row items-center gap-4 p-4 rounded-xl bg-primary-teal w-full hover:opacity-80 transition-opacity">
+                    <img src="./img/daun-icon.PNG" class="object-cover object-center aspect-square w-28">
+                    <div class="flex flex-col text-white gap-2">
+                        <p class="font-semibold text-lg">Kecemasan dan stress</p>
+                        <p>Hirup semangat, hembuskan kepenatan</p>
+                    </div>
+                </div>
+                <div class="flex flex-row items-center gap-4 p-4 rounded-xl bg-primary-teal w-full hover:opacity-80 transition-opacity">
+                    <img src="./img/koper-icon.PNG" class="object-cover object-center aspect-square w-28">
+                    <div class="flex flex-col text-white gap-2">
+                        <p class="font-semibold text-lg">Pekerjaan dan produktivitas</p>
+                        <p>Membantumu untuk tenang ketika menghadapi banyak tugas</p>
+                    </div>
+                </div>
+                <div class="flex flex-row items-center gap-4 p-4 rounded-xl bg-primary-teal w-full hover:opacity-80 transition-opacity">
+                    <img src="./img/warning-sign.PNG" class="object-cover object-center aspect-square w-28">
+                    <div class="flex flex-col text-white gap-2">
+                        <p class="font-semibold text-lg">Meditasi darurat</p>
+                        <p>Membantumu melewati masa penuh emosi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden transition-opacity opacity-0 flex-col relative pages" id="jurnal-gemas">
+            <div class="flex flex-row items-center justify-center relative h-16 w-full px-6 bg-primary-teal text-white shrink-0">
+                <a href="#dashboard" class="fas fa-chevron-left absolute left-6"></a>
+                <p class="font-semibold text-lg">JURNAL GEMAS</p>
+            </div>
+            <div class="flex flex-col gap-4 shrink-0">
+                <div class="min-h-[225px] w-full">
+                    <img src="./img/journal-heading.PNG" class="object-cover object-center w-full min-h-full">
+                </div>
+                <div class="flex flex-col gap-4 w-full p-6 pt-0">
+                    <p class="font-semibold text-xl">Topik Jurnal</p>
+                    <div class="flex flex-row items-center gap-4 p-4 rounded-xl bg-white w-full hover:ring-primary-teal transition-colors ring-1 ring-secondary-teal">
+                        <img src="./img/love-hand-book.png" class="object-cover object-center aspect-square w-28">
+                        <div class="flex flex-col text-primary-teal gap-2">
+                            <p class="font-semibold text-lg">Kenali diri sendiri</p>
+                            <p>Curahkan segala perasaan yang ada di dirimu!</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row items-center gap-4 p-4 rounded-xl bg-white w-full hover:ring-primary-teal transition-colors ring-1 ring-secondary-teal">
+                        <img src="./img/love-handshake-book.png" class="object-cover object-center aspect-square w-28">
+                        <div class="flex flex-col text-primary-teal gap-2">
+                            <p class="font-semibold text-lg">Menjalin relasi</p>
+                            <p>Ceritakan setiap pengalaman berkesanmu dengan orang lain</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row items-center gap-4 p-4 rounded-xl bg-white w-full hover:ring-primary-teal transition-colors ring-1 ring-secondary-teal">
+                        <img src="./img/time-book.png" class="object-cover object-center aspect-square w-28">
+                        <div class="flex flex-col text-primary-teal gap-2">
+                            <p class="font-semibold text-lg">Abadikan tiap peristiwa</p>
+                            <p>Ceritakan setap peristiwa yang menurutmu penting</p>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden transition-opacity opacity-0 flex-col relative pages" id="konseling">
+            <div class="flex flex-row items-center justify-center relative h-16 w-full px-6 bg-primary-teal text-white shrink-0">
+                <a href="#dashboard" class="fas fa-chevron-left absolute left-6"></a>
+                <p class="font-semibold text-lg">KONSELING</p>
+                <img src="./img/sos-icon.PNG" class="object-center object-cover aspect-square absolute right-6 w-10">
+            </div>
+            <div class="flex flex-row items-center gap-4 p-6 font-semibold text-lg text-primary-teal shrink-0 overflow-x-auto">
+                <div class="rounded-md p-2 bg-primary-teal ring-1 ring-primary-teal flex flex-col gap-1 shrink-0 text-white">
+                    <p>Sen</p>
+                    <p>16 Mei</p>
+                </div>
+                <div class="rounded-md p-2 bg-cyan-50 ring-1 ring-secondary-teal flex flex-col gap-1 shrink-0">
+                    <p>Sel</p>
+                    <p>17 Mei</p>
+                </div>
+                <div class="rounded-md p-2 bg-cyan-50 ring-1 ring-secondary-teal flex flex-col gap-1 shrink-0">
+                    <p>Rab</p>
+                    <p>18 Mei</p>
+                </div>
+                <div class="rounded-md p-2 bg-cyan-50 ring-1 ring-secondary-teal flex flex-col gap-1 shrink-0">
+                    <p>Kamis</p>
+                    <p>19 Mei</p>
+                </div>
+                <div class="rounded-md p-2 bg-cyan-50 ring-1 ring-secondary-teal flex flex-col gap-1 shrink-0">
+                    <p>Jum</p>
+                    <p>20 Mei</p>
+                </div>
+                <div class="rounded-md p-2 bg-cyan-50 ring-1 ring-secondary-teal flex flex-col gap-1 shrink-0">
+                    <p>Sab</p>
+                    <p>21 Mei</p>
+                </div>
+                <div class="rounded-md p-2 bg-cyan-50 ring-1 ring-secondary-teal flex flex-col gap-1 shrink-0">
+                    <p>Min</p>
+                    <p>22 Mei</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 p-6 pt-0">
+                <p class="font-semibold text-xl">Pilih psikolog</p>
+                <div class="flex flex-row gap-4 p-4 rounded-xl bg-primary-teal w-full hover:ring-primary-teal transition-colors ring-1 ring-secondary-teal">
+                    <div class="relative flex flex-col items-center">
+                        <img src="./img/person-1.png" class="object-cover object-center aspect-square min-w-28 rounded-md">
+                        <div class="absolute flex flex-row items-center gap-1 rounded-full bg-white shadow -bottom-2 text-sm w-max px-2">
+                            <p class="text-yellow-400 fas fa-star"></p>
+                            <p>4.9</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2 text-white">
+                        <p class="font-semibold">Jati Karunia, M. Psi., Psikolog</p>
+                        <p class="text-sm">Jadwal yang tersedia</p>
+                        <div class="flex flex-row items-center justify-start text-primary-teal text-xs gap-4">
+                            <p class="bg-white p-1 rounded">12.00</p>
+                            <p class="bg-white p-1 rounded">14.00</p>
+                            <p class="bg-white p-1 rounded">16.00</p>
+                        </div>
+                        <div class="flex flex-row items-center gap-2 self-end text-xs mt-2">
+                            <p>Lihat profil</p>
+                            <p class="fas fa-chevron-right"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-4 p-4 rounded-xl bg-primary-teal w-full hover:ring-primary-teal transition-colors ring-1 ring-secondary-teal">
+                    <div class="relative flex flex-col items-center">
+                        <img src="./img/person-2.png" class="object-cover object-center aspect-square min-w-28 rounded-md">
+                        <div class="absolute flex flex-row items-center gap-1 rounded-full bg-white shadow -bottom-2 text-sm w-max px-2">
+                            <p class="text-yellow-400 fas fa-star"></p>
+                            <p>4.7</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2 text-white">
+                        <p class="font-semibold">Chanindra, M. Psi., Psikolog</p>
+                        <p class="text-sm">Jadwal yang tersedia</p>
+                        <div class="flex flex-row items-center justify-start text-primary-teal text-xs gap-4">
+                            <p class="bg-white p-1 rounded">20.00</p>
+                            <p class="bg-white p-1 rounded">21.00</p>
+                        </div>
+                        <div class="flex flex-row items-center gap-2 self-end text-xs mt-2">
+                            <p>Lihat profil</p>
+                            <p class="fas fa-chevron-right"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-4 p-4 rounded-xl bg-primary-teal w-full hover:ring-primary-teal transition-colors ring-1 ring-secondary-teal">
+                    <div class="relative flex flex-col items-center">
+                        <img src="./img/person-3.png" class="object-cover object-center aspect-square min-w-28 rounded-md">
+                        <div class="absolute flex flex-row items-center gap-1 rounded-full bg-white shadow -bottom-2 text-sm w-max px-2">
+                            <p class="text-yellow-400 fas fa-star"></p>
+                            <p>4.9</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2 text-white">
+                        <p class="font-semibold">dr. Bahtera, M. Kes., Sp. KJ</p>
+                        <p class="text-sm">Jadwal yang tersedia</p>
+                        <div class="flex flex-row items-center justify-start text-primary-teal text-xs gap-4">
+                            <p class="bg-white p-1 rounded">10.00</p>
+                        </div>
+                        <div class="flex flex-row items-center gap-2 self-end text-xs mt-2">
+                            <p>Lihat profil</p>
+                            <p class="fas fa-chevron-right"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-4 p-4 rounded-xl bg-primary-teal w-full hover:ring-primary-teal transition-colors ring-1 ring-secondary-teal">
+                    <div class="relative flex flex-col items-center">
+                        <img src="./img/person-4.png" class="object-cover object-center aspect-square min-w-28 rounded-md">
+                        <div class="absolute flex flex-row items-center gap-1 rounded-full bg-white shadow -bottom-2 text-sm w-max px-2">
+                            <p class="text-yellow-400 fas fa-star"></p>
+                            <p>4.9</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2 text-white">
+                        <p class="font-semibold">dr. Hanafi, M. Kes., Sp. KJ</p>
+                        <p class="text-sm">Jadwal yang tersedia</p>
+                        <div class="flex flex-row items-center justify-start text-primary-teal text-xs gap-4">
+                            <p class="bg-white p-1 rounded">20.00</p>
+                            <p class="bg-white p-1 rounded">21.00</p>
+                            <p class="bg-white p-1 rounded">22.00</p>
+                        </div>
+                        <div class="flex flex-row items-center gap-2 self-end text-xs mt-2">
+                            <p>Lihat profil</p>
+                            <p class="fas fa-chevron-right"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-6"></div>
+            </div>
+            <a href="#pembayaran-konseling" class="shadow-md grid place-items-center w-96 fixed bottom-6 left-1/2 -translate-x-1/2 rounded-lg bg-secondary-teal h-12 page-btn">Booking Sekarang</a>
+        </div>        
+        <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden transition-opacity opacity-0 flex-col relative pages" id="pembayaran-konseling">
+            <div class="flex flex-row items-center justify-center relative h-16 w-full px-6 bg-primary-teal text-white shrink-0">
+                <a href="#konseling" class="fas fa-chevron-left absolute left-6"></a>
+                <p class="font-semibold text-lg">KONSELING</p>
+                <p class="fas fa-magnifying-glass absolute right-6"></p>
+            </div>
+            <div class="shrink-0 w-full flex flex-col gap-4 p-4">
+                <button class="h-12 w-full bg-primary-teal text-white rounded-full">PILIH METODE PEMBAYARAN</button>
+                <img src="./img/hi-img.png" class="object-center object-cover w-48 self-center">
+                <button class="flex flex-row items-center justify-center text-white h-12 w-full bg-primary-teal p-2 gap-4 rounded-md relative">
+                    <img src="./img/card-icon.PNG" class="object-center object-cover h-8 absolute left-2" style="filter:invert(100%)">
+                    <p>Transaksi Bank</p>
+                </button>
+                <button class="flex flex-row items-center justify-center text-white h-12 w-full bg-primary-teal p-2 gap-4 rounded-md relative">
+                    <img src="./img/bri-icon.png" class="object-center object-cover h-6 absolute left-2">
+                    <p>Bank BRI</p>
+                </button>
+                <button class="flex flex-row items-center justify-center text-white h-12 w-full bg-primary-teal p-2 gap-4 rounded-md relative">
+                    <img src="./img/bca-icon.png" class="object-center object-cover h-6 absolute left-2">
+                    <p>Bank BCA</p>
+                </button>
+                <button class="flex flex-row items-center justify-center text-white h-12 w-full bg-primary-teal p-2 gap-4 rounded-md relative">
+                    <img src="./img/mandiri-icon.png" class="object-center object-cover h-6 absolute left-2">
+                    <p>Bank Mandiri</p>
+                </button>
+                <button class="flex flex-row items-center justify-center text-white h-12 w-full bg-primary-teal p-2 gap-4 rounded-md relative">
+                    <img src="./img/bni-icon.png" class="object-center object-cover h-6 absolute left-2">
+                    <p>Bank BNI</p>
+                </button>
+            </div>
+        </div>        
+        <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden transition-opacity opacity-0 flex-col relative pages" id="chat-gemas">
+            <div class="flex flex-row items-center justify-center relative h-16 w-full px-6 bg-primary-teal text-white shrink-0">
+                <a href="#dashboard" class="fas fa-chevron-left absolute left-6"></a>
+                <p class="font-semibold text-lg">CHAT GEMAS</p>
+            </div>
+            <div class="shrink-0 w-full flex flex-col gap-4 p-6 pt-0 items-center justify-center min-h-[calc(100%_-_64px)]">
+                <img src="./img/hi2-img.png" class="object-center object-cover w-96">
+                <a href="#chatroom-gemas" class="hover:bg-active-teal transition-colors h-12 w-full bg-primary-teal text-white rounded-md mt-4 page-btn grid place-items-center">Mulai Chat</a>
+            </div>
+        </div>   
+        <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden transition-opacity opacity-0 flex-col relative pages gap-4" id="chatroom-gemas">
+            <div class="flex flex-row items-center justify-center relative h-16 w-full px-6 bg-primary-teal text-white shrink-0">
+                <a href="#chat-gemas" class="fas fa-chevron-left absolute left-6"></a>
+                <p class="font-semibold text-lg">CHAT GEMAS</p>
+            </div>
+            <div class="flex flex-col gap-2 w-ful shrink-0 px-4 min-h-[calc(100%_-68px)]">
+                <div class="flex flex-row self-end gap-4 max-w-64">
+                    <div class="bg-secondary-teal text-sm p-2 rounded-xl rounded-br-none">
+                        <p>#CeritaGemas</p>
+                    </div>
+                    <img src="./img/avatar.png" class="min-w-12 h-12 aspect-square rounded-full overflow-hidden mt-auto">
+                </div>
+                <div class="flex flex-row self-start gap-4 max-w-64">
+                    <img src="./img/hi-img.png" class="min-w-12 h-12 aspect-square rounded-full overflow-hidden mt-auto">
+                    <div class="bg-disabled-teal text-sm p-2 rounded-xl rounded-bl-none">
+                        <p>Hai, Afandi love 🥰 Bagaimana persaanmu saat ini?</p>
+                    </div>
+                </div>
+                <div class="flex flex-row self-end gap-4 max-w-64">
+                    <div class="bg-secondary-teal text-sm p-2 rounded-xl rounded-br-none">
+                        <p>Aku sedang marah dengan seseorang</p>
+                    </div>
+                    <img src="./img/avatar.png" class="min-w-12 h-12 aspect-square rounded-full overflow-hidden mt-auto">
+                </div>
+                <div class="flex flex-row self-start gap-4 max-w-64">
+                    <img src="./img/hi-img.png" class="min-w-12 h-12 aspect-square rounded-full overflow-hidden mt-auto">
+                    <div class="bg-disabled-teal text-sm p-2 rounded-xl rounded-bl-none">
+                        <p>Afandi tarik nafas yang dalam, lalu hembuskan. Setelah itu coba ceritakan mengapa kamu bisa marah?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 fixed bottom-4 left-1/2 -translate-x-1/2 w-96">
+                <div class="flex flex-row items-center gap-4 w-full">
+                    <input type="text" class="ring-1 rounded-md placeholder-shown:ring-slate-300 ring-primary-teal bg-transparent w-full px-4 h-12 transition-colors" placeholder="Ketik pesan..">
+                    <button class="min-w-12 h-12 rounded-md bg-primary-teal fas fa-paper-plane text-white"></button>
+                </div>
+                <button class="h-12 w-full bg-primary-teal text-white rounded-md">Akhiri chat</button>
+            </div>
+        </div>
+        <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden transition-opacity opacity-0 flex-col pages" id="suara-tenang">
+            <div class="flex flex-row items-center justify-center relative h-16 w-full px-6 bg-primary-teal text-white shrink-0">
+                <a href="#dashboard" class="fas fa-chevron-left absolute left-6"></a>
+                <p class="font-semibold text-lg">SUARA TENANG</p>
+                <p class="fas fa-magnifying-glass absolute right-6"></p>
+            </div>
+            <div class="flex flex-col gap-4 shrink-0 h-max">
+                <div class="h-[225px] w-full">
+                    <img src="./img/sleep-img.PNG" class="object-cover object-bottom w-full h-full">
+                </div>
+                <p class="font-semibold text-xl px-6">Suara dan musik membuatmu santai</p>
+                <div class="flex flex-col gap-4 p-6 pt-0">
+                    <div class="flex flex-col p-4 ring-disabled-teal ring-1 rounded-lg gap-2">
+                        <div class="flex flex-row items-center justify-between text-primary-teal">
+                            <p class="font-semibold">Suara Hujan</p>
+                            <p class="fas fa-volume-high"></p>
+                        </div>
+                        <input type="range" class="w-full accent-primary-teal" value="70">
+                    </div>
+                    <div class="flex flex-col p-4 ring-disabled-teal ring-1 rounded-lg gap-2">
+                        <div class="flex flex-row items-center justify-between text-primary-teal">
+                            <p class="font-semibold">Suara Kicauan Burung</p>
+                            <p class="fas fa-volume-high"></p>
+                        </div>
+                        <input type="range" class="w-full accent-primary-teal" value="50">
+                    </div>
+                    <div class="flex flex-col p-4 ring-disabled-teal ring-1 rounded-lg gap-2">
+                        <div class="flex flex-row items-center justify-between text-primary-teal">
+                            <p class="font-semibold">Suara Deburan Ombak</p>
+                            <p class="fas fa-volume-mute"></p>
+                        </div>
+                        <input type="range" class="w-full accent-primary-teal" value="0">
+                    </div>
+                    <button class="h-12 bg-primary-teal text-white rounded-md fixed bottom-6 left-1/2 -translate-x-1/2 w-96 shadow-md">Putar Sekarang</button>
+                </div>
+            </div>
+        </div>
+        <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden transition-opacity opacity-0 flex-col pages" id="gemas-pet">
+            <div class="flex flex-row items-center justify-center relative h-16 w-full px-6 bg-primary-teal text-white shrink-0">
+                <a href="#dashboard" class="fas fa-chevron-left absolute left-6"></a>
+                <p class="font-semibold text-lg">GEMAS PET</p>
+            </div>
+            <div class="flex flex-col w-full min-h-full">
+                <img src="./img/pet3-img.PNG" class="object-cover object-center w-full h-full">
             </div>
         </div>
     </body>
