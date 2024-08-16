@@ -543,37 +543,82 @@
             </div>
             <div class="shrink-0 w-full flex flex-col gap-4 p-6 pt-0 items-center justify-center min-h-[calc(100%_-_64px)]">
                 <img src="./img/hi2-img.png" class="object-center object-cover w-96">
-                <a href="#chatroom-gemas" class="hover:bg-active-teal transition-colors h-12 w-full bg-primary-teal text-white rounded-md mt-4 page-btn grid place-items-center">Mulai Chat</a>
+                <div class="flex flex-col gap-4 items-center w-full mt-4 ">
+                    <p class="font-semibold">Pilih kata kunci</p>
+                    <div class="flex flex-row items-center gap-4 w-full">
+                        <a href="#gemaspedia" class="hover:bg-active-teal transition-colors h-12 w-full bg-primary-teal text-white rounded-md page-btn grid place-items-center">Gemaspedia</a>
+                        <a href="#curhat-gemas" class="hover:bg-active-teal transition-colors h-12 w-full bg-primary-teal text-white rounded-md page-btn grid place-items-center">Curhat Gemas</a>
+                    </div>
+                </div>
             </div>
         </div>   
-        <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden transition-opacity opacity-0 flex-col relative pages gap-4" id="chatroom-gemas">
+        <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden transition-opacity opacity-0 flex-col relative pages gap-4" id="curhat-gemas">
             <div class="flex flex-row items-center justify-center relative h-16 w-full px-6 bg-primary-teal text-white shrink-0">
                 <a href="#chat-gemas" class="fas fa-chevron-left absolute left-6"></a>
                 <p class="font-semibold text-lg">CHAT GEMAS</p>
             </div>
             <div class="flex flex-col gap-2 w-ful shrink-0 px-4 min-h-[calc(100%_-68px)]">
-                <div class="flex flex-row self-end gap-4 max-w-64">
+                <div class="flex flex-row self-end gap-4 max-w-80">
                     <div class="bg-secondary-teal text-sm p-2 rounded-xl rounded-br-none">
                         <p>#CeritaGemas</p>
                     </div>
                     <img src="./img/avatar.png" class="min-w-12 h-12 aspect-square rounded-full overflow-hidden mt-auto">
                 </div>
-                <div class="flex flex-row self-start gap-4 max-w-64">
+                <div class="flex flex-row self-start gap-4 max-w-80">
                     <img src="./img/hi-img.png" class="min-w-12 h-12 aspect-square rounded-full overflow-hidden mt-auto">
                     <div class="bg-disabled-teal text-sm p-2 rounded-xl rounded-bl-none">
-                        <p>Hai, Afandi love 🥰 Bagaimana persaanmu saat ini?</p>
+                        <p>Hai, Afandi! 🥰 Bagaimana persaanmu saat ini?</p>
                     </div>
                 </div>
-                <div class="flex flex-row self-end gap-4 max-w-64">
+                <div class="flex flex-row self-end gap-4 max-w-80">
                     <div class="bg-secondary-teal text-sm p-2 rounded-xl rounded-br-none">
                         <p>Aku sedang marah dengan seseorang</p>
                     </div>
                     <img src="./img/avatar.png" class="min-w-12 h-12 aspect-square rounded-full overflow-hidden mt-auto">
                 </div>
-                <div class="flex flex-row self-start gap-4 max-w-64">
+                <div class="flex flex-row self-start gap-4 max-w-80">
                     <img src="./img/hi-img.png" class="min-w-12 h-12 aspect-square rounded-full overflow-hidden mt-auto">
                     <div class="bg-disabled-teal text-sm p-2 rounded-xl rounded-bl-none">
                         <p>Afandi tarik nafas yang dalam, lalu hembuskan. Setelah itu coba ceritakan mengapa kamu bisa marah?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 fixed bottom-4 left-1/2 -translate-x-1/2 w-96">
+                <div class="flex flex-row items-center gap-4 w-full">
+                    <input type="text" class="ring-1 rounded-md placeholder-shown:ring-slate-300 ring-primary-teal bg-transparent w-full px-4 h-12 transition-colors" placeholder="Ketik pesan..">
+                    <button class="min-w-12 h-12 rounded-md bg-primary-teal fas fa-paper-plane text-white"></button>
+                </div>
+                <button class="h-12 w-full bg-primary-teal text-white rounded-md">Akhiri chat</button>
+            </div>
+        </div>
+        <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden transition-opacity opacity-0 flex-col relative pages gap-4" id="gemaspedia">
+            <div class="flex flex-row items-center justify-center relative h-16 w-full px-6 bg-primary-teal text-white shrink-0">
+                <a href="#chat-gemas" class="fas fa-chevron-left absolute left-6"></a>
+                <p class="font-semibold text-lg">CHAT GEMAS</p>
+            </div>
+            <div class="flex flex-col gap-2 w-ful shrink-0 px-4 min-h-[calc(100%_-68px)]">
+                <div class="flex flex-row self-end gap-4 max-w-80">
+                    <div class="bg-secondary-teal text-sm p-2 rounded-xl rounded-br-none">
+                        <p>#GemasPedia</p>
+                    </div>
+                    <img src="./img/avatar.png" class="min-w-12 h-12 aspect-square rounded-full overflow-hidden mt-auto">
+                </div>
+                <div class="flex flex-row self-start gap-4 max-w-80">
+                    <img src="./img/hi-img.png" class="min-w-12 h-12 aspect-square rounded-full overflow-hidden mt-auto">
+                    <div class="bg-disabled-teal text-sm p-2 rounded-xl rounded-bl-none">
+                        <p>Hai, Afandi! 🥰 Apa yang ingin kamu ketahui?</p>
+                    </div>
+                </div>
+                <div class="flex flex-row self-end gap-4 max-w-80">
+                    <div class="bg-secondary-teal text-sm p-2 rounded-xl rounded-br-none">
+                        <p>Apa itu penyakit anxiety disorder?</p>
+                    </div>
+                    <img src="./img/avatar.png" class="min-w-12 h-12 aspect-square rounded-full overflow-hidden mt-auto">
+                </div>
+                <div class="flex flex-row self-start gap-4 max-w-80">
+                    <img src="./img/hi-img.png" class="min-w-12 h-12 aspect-square rounded-full overflow-hidden mt-auto">
+                    <div class="bg-disabled-teal text-sm p-2 rounded-xl rounded-bl-none">
+                        <p>Anxiety disorder adalah gangguan mental yang menyebabkan kecemasan berlebih hingga mengganggu aktivitas?</p>
                     </div>
                 </div>
             </div>
@@ -628,7 +673,44 @@
                 <p class="font-semibold text-lg">GEMAS PET</p>
             </div>
             <div class="flex flex-col w-full min-h-full">
-                <img src="./img/pet1-img.PNG" class="object-cover object-center w-full h-full">
+                <img src="./img/pet.png" class="object-cover object-bottom w-full h-full">
+            </div>
+            <div class="flex flex-col gap-4 items-center mt-4 fixed bottom-6 w-96 left-1/2 -translate-x-1/2">
+                <p class="font-semibold">Pilih kata kunci</p>
+                <div class="flex flex-row items-center gap-4 w-full">
+                    <a href="#gemas-pet-yes" class="shadow-md hover:bg-active-teal transition-colors h-12 w-full bg-primary-teal text-white rounded-md page-btn grid place-items-center">Ya</a>
+                    <a href="#gemas-pet-no" class="shadow-md hover:bg-active-teal transition-colors h-12 w-full bg-primary-teal text-white rounded-md page-btn grid place-items-center">Tidak</a>
+                </div>
+            </div>
+        </div>
+        <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden transition-opacity opacity-0 flex-col pages" id="gemas-pet-yes">
+            <div class="flex flex-row items-center justify-center relative h-16 w-full px-6 bg-primary-teal text-white shrink-0">
+                <a href="#gemas-pet" class="fas fa-chevron-left absolute left-6"></a>
+                <p class="font-semibold text-lg">GEMAS PET</p>
+            </div>
+            <div class="flex flex-col w-full min-h-full">
+                <img src="./img/petyes.png" class="object-cover object-bottom w-full h-full">
+            </div>
+            <div class="flex flex-row self-end gap-4 max-w-80 absolute bottom-10 right-6">
+                <div class="bg-secondary-teal text-sm p-2 rounded-xl rounded-br-none">
+                    <p>Ya</p>
+                </div>
+                <img src="./img/avatar.png" class="min-w-12 h-12 aspect-square rounded-full overflow-hidden mt-auto">
+            </div>
+        </div>
+        <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden transition-opacity opacity-0 flex-col pages" id="gemas-pet-no">
+            <div class="flex flex-row items-center justify-center relative h-16 w-full px-6 bg-primary-teal text-white shrink-0">
+                <a href="#gemas-pet" class="fas fa-chevron-left absolute left-6"></a>
+                <p class="font-semibold text-lg">GEMAS PET</p>
+            </div>
+            <div class="flex flex-col w-full min-h-full">
+                <img src="./img/petno.png" class="object-cover object-bottom w-full h-full">
+            </div>
+            <div class="flex flex-row self-end gap-4 max-w-80 absolute bottom-10 right-6">
+                <div class="bg-secondary-teal text-sm p-2 rounded-xl rounded-br-none">
+                    <p>Tidak</p>
+                </div>
+                <img src="./img/avatar.png" class="min-w-12 h-12 aspect-square rounded-full overflow-hidden mt-auto">
             </div>
         </div>
         <div class="overflow-hidden overflow-y-auto page w-full sm:w-96 bg-cyan-50 h-[100dvh] hidden transition-opacity opacity-0 flex-col pages" id="profile">
